@@ -9,7 +9,7 @@
 						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "orderitemsource"
 				},
 				{
 					"dataset": {
@@ -99,7 +99,7 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"     ignoreNoFilesFound: false) ~> orderitemsource",
 				"source(output(",
 				"          CUSTOMER_ID as integer,",
 				"          EMAIL_ADDRESS as string,",
@@ -135,7 +135,7 @@
 				"     format: 'parquet') ~> source4",
 				"select1 derive(UpdatedTimestamp = currentUTC()) ~> UpdatedTimestamp",
 				"source2 derive(UpdatedTimestamp = currentUTC()) ~> derivedColumn1",
-				"source1 select(mapColumn(",
+				"orderitemsource select(mapColumn(",
 				"          ORDER_ID,",
 				"          PRODUCT_ID,",
 				"          UNIT_PRICE,",
