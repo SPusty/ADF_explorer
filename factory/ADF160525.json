@@ -1,0 +1,9 @@
+{
+	"name": "ADF160525",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b51414dd-0c35-4bce-ba1c-2bbd3b53a05a",
+		"tenantId": "d89c4f28-195e-4da9-a5c8-db3a95511fc9"
+	}
+}
