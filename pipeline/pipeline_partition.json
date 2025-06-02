@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "df_cleaningdata",
+				"name": "df_partition",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "df_cleaningdata",
+						"referenceName": "df_partition",
 						"type": "DataFlowReference"
 					},
 					"compute": {
