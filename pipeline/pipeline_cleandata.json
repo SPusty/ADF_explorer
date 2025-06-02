@@ -1,5 +1,5 @@
 {
-	"name": "pipeline_cleanse",
+	"name": "pipeline_cleandata",
 	"properties": {
 		"activities": [
 			{
