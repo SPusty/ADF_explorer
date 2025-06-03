@@ -1,0 +1,23 @@
+{
+	"name": "ParquetOrder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "sink/partitioned"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Order",
+				"fileSystem": "destdir"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
