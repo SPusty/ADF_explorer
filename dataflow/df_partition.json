@@ -75,7 +75,7 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('dynamicRange', 4,",
+				"     partitionBy('dynamicRange', 3,",
 				"          ORDER_STATUS",
 				"     ),",
 				"     format: 'parquet') ~> cleansinkorder"
