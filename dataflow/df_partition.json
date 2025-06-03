@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "ParquetSink",
+						"referenceName": "Parquet1",
 						"type": "DatasetReference"
 					},
 					"name": "cleansinkorder"
