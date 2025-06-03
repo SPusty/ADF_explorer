@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "Parquet1",
+						"referenceName": "DelimitedText2",
 						"type": "DatasetReference"
 					},
 					"name": "cleansinkorder"
@@ -69,12 +69,16 @@
 				"     skipDuplicateMapOutputs: true) ~> select3",
 				"select3 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     format: 'parquet',",
+				"     partitionFileNames:['Order_Complete','Order_Refunded','Order_Cancelled'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> cleansinkorder"
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('dynamicRange', 4,",
+				"          ORDER_STATUS",
+				"     ),",
+				"     format: 'parquet') ~> cleansinkorder"
 			]
 		}
 	}
